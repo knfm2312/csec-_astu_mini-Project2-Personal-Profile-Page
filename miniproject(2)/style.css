@@ -1,4 +1,44 @@
+body {
+    background-image: url(images/gradient-yellow-to-blue-background.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family:Arial, Helvetica, sans-serif;
+    background-size: cover;
+    background-position: center;
+}
+.sections {
+    background-color: white;
+    margin:20px auto;
+    padding: 20px;
+    border-radius: 20px;
+    width:80%;
+    height: 80%;
+}
+
+h1{
+    text-align: center;
+    text-transform: capitalize;
+}
+h2 {
+    text-align: center;
+}
 img {
+    display: flex;
     width:300px;
     height: 300px;
+}
+.cards {
+    width:200px;
+    height: 150px;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    border-style: ridge;
+    text-align: center;
+    background-image: url(images/image\ for\ card\ background1.jpg);
+    
+}
+#bio {
+    text-align: center;
+    font-size: 18px;
 }
