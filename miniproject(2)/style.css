@@ -1,44 +1,145 @@
 body {
+    font-family: Arial, Helvetica, sans-serif;
     background-image: url(images/gradient-yellow-to-blue-background.jpg);
+    background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    font-family:Arial, Helvetica, sans-serif;
-    background-size: cover;
-    background-position: center;
+    background-size:cover;
 }
-.sections {
-    background-color: white;
-    margin:20px auto;
-    padding: 20px;
-    border-radius: 20px;
-    width:80%;
-    height: 80%;
+#main {
+    align-items: center;
 }
 
-h1{
+#header {
     text-align: center;
     text-transform: capitalize;
+    font-weight: 18;
+
 }
-h2 {
-    text-align: center;
+
+#bio img {
+    width: 200px;
+    height:200px;
+    border-radius: 50%;
+    object-fit: cover;
 }
-img {
+
+#profile {
+
+    background-color: aliceblue;
+    padding:30px;
+    width:80%;
+    height: auto;
+    margin:20px auto;
+    border-radius: 10px;
+}
+
+#bio {
     display: flex;
-    width:300px;
-    height: 300px;
-}
-.cards {
-    width:200px;
-    height: 150px;
-    margin: 20px;
-    padding: 30px;
-    border-radius: 20px;
-    border-style: ridge;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
     text-align: center;
-    background-image: url(images/image\ for\ card\ background1.jpg);
+    flex-direction: row;
     
 }
-#bio {
+
+#bio p {
+    max-width: 500px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+#skills {
+   
+    padding:30px;
+    width:80%;
+    margin:20px auto;
+    border-radius: 10px;
+    background-color: aliceblue;
     text-align: center;
-    font-size: 18px;
+}
+
+#skills-block {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));;
+    gap:20px;
+    justify-items: center;
+
+}
+
+#skills-block div {
+    width: 250px;
+    border-style: ridge;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+#contact {
+
+    text-align: center;
+    background-color: aliceblue;
+    padding:30px;
+    width:80%;
+    margin:20px auto;
+    border-radius: 10px;
+}
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    align-items: center;
+}
+
+#contact label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#contact input,#contact textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    width:30%;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    
+}
+
+#contact button {
+    padding: 12px;
+    font-size: 16px;
+    background-color:#0f110f ;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+}
+
+@media (max-width: 768px) {
+  #bio {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #bio p {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1024px){
+    #skills {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width:768px){
+    #skills {
+        grid-template-columns: auto;
+    }
 }
