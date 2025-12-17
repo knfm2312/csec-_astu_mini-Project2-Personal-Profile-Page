@@ -1,93 +1,98 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(images/gradient-yellow-to-blue-background.jpg);
+    background-image: url(images/manta-9757343_1280.webp);
     background-position: center;
-    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
 }
+
 #main {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
 #header {
     text-align: center;
     text-transform: capitalize;
-    font-weight: 18;
-
+    font-weight: 600;
 }
 
-#bio img {
-    width: 200px;
-    height:200px;
-    border-radius: 50%;
-    object-fit: cover;
+#header h1 {
+    display: block;
 }
 
 #profile {
-
-    background-color: aliceblue;
-    padding:30px;
-    width:80%;
-    height: auto;
-    margin:20px auto;
-    border-radius: 10px;
+    background-color:#c7c099;
+    padding: 30px;
+    width: 60%;
+    margin: 20px auto;
+    border-radius: 20px;
 }
 
 #bio {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
     padding: 20px;
-    text-align: center;
+    text-align: left;
     flex-direction: row;
-    
+    flex-wrap: wrap;
+}
+
+#bio img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 #bio p {
-    max-width: 500px;
+    max-width: 60%;
     line-height: 1.6;
-    font-size: 16px;
 }
 
 #skills {
-   
-    padding:30px;
-    width:80%;
-    margin:20px auto;
-    border-radius: 10px;
-    background-color: aliceblue;
+    padding: 30px;
+    width: 60%;
+    margin: 20px auto;
+    border-radius: 20px;
+    background-color:#c7c099;
     text-align: center;
 }
 
 #skills-block {
-
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));;
-    gap:20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     justify-items: center;
-
 }
 
 #skills-block div {
-    width: 250px;
-    border-style: ridge;
+    width: 200px;
+    min-height: 300px;
+    border-style: none;
     text-align: center;
     padding: 20px;
-    border-radius: 10px;
-
+    border-radius: 20px;
 }
 
 #contact {
-
     text-align: center;
-    background-color: aliceblue;
-    padding:30px;
-    width:80%;
-    margin:20px auto;
-    border-radius: 10px;
+    background-color: #c7c099;
+    padding: 30px;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 20px;
 }
+
 #contact form {
     display: flex;
     flex-direction: column;
@@ -100,46 +105,80 @@ body {
     font-weight: bold;
     margin-bottom: 5px;
 }
-#contact input,#contact textarea {
+
+#contact input,
+#contact textarea {
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 5px;
     font-size: 16px;
-    width:30%;
+    width: 90%;
+    max-width: 400px;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
-    
 }
 
 #contact button {
     padding: 12px;
     font-size: 16px;
-    background-color:#0f110f ;
+    background-color: #0f110f;
     color: white;
     border: none;
     border-radius: 10px;
-
+    cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  #bio {
-    flex-direction: column;
+#card1 {
+    background:linear-gradient(to right, #aea471, #af8384);
+}
+
+#card2 {
+    background: linear-gradient(to right, rgb(131, 131, 156) , grey);
+}
+
+#card3 {
+    background:linear-gradient(to right, rgb(126, 95, 95) ,rgb(114, 171, 114))
+}
+
+#card4 {
+    background: linear-gradient(to right, rgb(132, 116, 86), rgb(135, 110, 135));
+}
+#footer {
+    background-color: #E8E8E8;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 20px;
     text-align: center;
-  }
-
-  #bio p {
-    max-width: 90%;
-  }
+    text-transform: capitalize;
+    font-weight: 600;
 }
 
-@media (max-width: 1024px){
-    #skills {
-        grid-template-columns: auto auto;
+@media (max-width: 1024px) {
+    #skills-block {
+        grid-template-columns: 2fr;
     }
 }
 
-@media (max-width:768px){
-    #skills {
-        grid-template-columns: auto;
+@media (max-width: 768px) {
+    #bio {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #bio img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 15px;
+    }
+
+    #bio p {
+        max-width: 90%;
+    }
+
+    #contact input,
+    #contact textarea {
+        width: 100%;
     }
 }
