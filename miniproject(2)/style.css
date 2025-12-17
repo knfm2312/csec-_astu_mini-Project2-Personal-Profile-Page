@@ -87,8 +87,7 @@ body {
     text-align: center;
     background-color: #c7c099;
     padding: 30px;
-    width: 90%;
-    max-width: 800px;
+    width: 60%;
     margin: 20px auto;
     border-radius: 20px;
 }
@@ -145,12 +144,12 @@ body {
 }
 #footer {
     background-color: #E8E8E8;
-    width: 90%;
     margin: 20px auto;
-    border-radius: 20px;
+    width: 100%;
+   
     text-align: center;
     text-transform: capitalize;
-    font-weight: 600;
+    padding: 0px;
 }
 
 @media (max-width: 1024px) {
@@ -181,4 +180,12 @@ body {
     #contact textarea {
         width: 100%;
     }
+}
+.cards:hover {
+    transform: scale(1.1);
+}
+#contact button:hover {
+    transform: scale(1.1);
+    background-color: white;
+    color: black;
 }
